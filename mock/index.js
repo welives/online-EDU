@@ -5,9 +5,10 @@ const user = require('./user')
 const role = require('./role')
 const article = require('./article')
 const course = require('./course')
+const production = require('./production')
 const search = require('./remote-search')
 
-const mocks = [...user, ...role, ...article, ...search, ...course]
+const mocks = [...user, ...role, ...article, ...search, ...course, ...production]
 
 // for front mock
 // please use it cautiously, it will redefine XMLHttpRequest,

@@ -117,37 +117,65 @@ export const constantRoutes = [
  * the routes that need to be dynamically loaded based on user roles
  */
 export const asyncRoutes = [
+  // {
+  //   alwaysShow: true,
+  //   path: '/course',
+  //   component: Layout,
+  //   redirect: '/course/media',
+  //   name: 'Course',
+  //   meta: { title: '课程', icon: 'excel', roles: ['admin', 'editor'] },
+  //   children: [
+  //     {
+  //       path: 'media',
+  //       component: () => import('@/views/course/media'),
+  //       name: 'Media',
+  //       meta: { title: '图文', noCache: true }
+  //     },
+  //     {
+  //       path: 'audio',
+  //       component: () => import('@/views/course/audio'),
+  //       name: 'Audio',
+  //       meta: { title: '音频', noCache: true }
+  //     },
+  //     {
+  //       path: 'video',
+  //       component: () => import('@/views/course/video'),
+  //       name: 'Video',
+  //       meta: { title: '视频', noCache: true }
+  //     },
+  //     {
+  //       path: 'column',
+  //       component: () => import('@/views/course/column'),
+  //       name: 'Column',
+  //       meta: { title: '专栏', noCache: true }
+  //     }
+  //   ]
+  // },
   {
     alwaysShow: true,
-    path: '/course',
+    path: '/production',
     component: Layout,
-    redirect: '/course/media',
-    name: 'Course',
-    meta: { title: '课程', icon: 'excel', roles: ['admin', 'editor'] },
+    redirect: '/production/song',
+    name: 'Production',
+    meta: { title: '作品', icon: 'excel', roles: ['admin', 'editor'] },
     children: [
       {
-        path: 'media',
-        component: () => import('@/views/course/media'),
-        name: 'Media',
-        meta: { title: '图文', noCache: true }
+        path: 'song',
+        component: () => import('@/views/production/song'),
+        name: 'Song',
+        meta: { title: '歌', noCache: true }
       },
       {
-        path: 'audio',
-        component: () => import('@/views/course/audio'),
-        name: 'Audio',
-        meta: { title: '音频', noCache: true }
+        path: 'lyric',
+        component: () => import('@/views/production/lyric'),
+        name: 'Lyric',
+        meta: { title: '词', noCache: true }
       },
       {
-        path: 'video',
-        component: () => import('@/views/course/video'),
-        name: 'Video',
-        meta: { title: '视频', noCache: true }
-      },
-      {
-        path: 'column',
-        component: () => import('@/views/course/column'),
-        name: 'Column',
-        meta: { title: '专栏', noCache: true }
+        path: 'music',
+        component: () => import('@/views/production/music'),
+        name: 'Music',
+        meta: { title: '曲', noCache: true }
       }
     ]
   },
